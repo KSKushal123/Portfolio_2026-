@@ -54,26 +54,30 @@ export default function Contact() {
 
           {/* Right Column - Contact Form */}
           <div className="card contact-form-card" style={{ padding: '2.5rem' }}>
-            <form className="contact-form" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <form action="https://formsubmit.co/kskushal123456@gmail.com" method="POST" className="contact-form" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+              {/* FormSubmit Configuration (Optional but recommended) */}
+              <input type="hidden" name="_subject" value="New submission from Portfolio!" />
+              <input type="hidden" name="_captcha" value="false" />
+              
               <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
                 <div className="form-group" style={{ flex: '1', minWidth: '150px' }}>
                   <label htmlFor="name" className="form-label">Name</label>
-                  <input type="text" id="name" className="form-input" placeholder="John Doe" />
+                  <input type="text" id="name" name="name" className="form-input" placeholder="John Doe" required />
                 </div>
                 <div className="form-group" style={{ flex: '1', minWidth: '150px' }}>
                   <label htmlFor="email" className="form-label">Email</label>
-                  <input type="email" id="email" className="form-input" placeholder="john@example.com" />
+                  <input type="email" id="email" name="email" className="form-input" placeholder="john@example.com" required />
                 </div>
               </div>
               <div className="form-group">
                 <label htmlFor="subject" className="form-label">Subject</label>
-                <input type="text" id="subject" className="form-input" placeholder="Project Inquiry" />
+                <input type="text" id="subject" name="subject" className="form-input" placeholder="Project Inquiry" required />
               </div>
               <div className="form-group">
                 <label htmlFor="message" className="form-label">Message</label>
-                <textarea id="message" className="form-input" rows="5" placeholder="Tell me about your project..."></textarea>
+                <textarea id="message" name="message" className="form-input" rows="5" placeholder="Tell me about your project..." required></textarea>
               </div>
-              <button type="button" className="form-submit-btn">
+              <button type="submit" className="form-submit-btn">
                 Send Message <Send size={18} />
               </button>
             </form>
