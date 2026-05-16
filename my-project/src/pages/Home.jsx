@@ -44,6 +44,10 @@ export default function Home() {
                 e.target.src = "https://via.placeholder.com/400x500?text=Please+add+profile.jpg+to+public+folder";
               }}
             />
+            <div className="floating-badge">
+              <div className="badge-title">BASED IN</div>
+              <div className="badge-value">Karnataka, India</div>
+            </div>
           </div>
         </div>
       </section>
