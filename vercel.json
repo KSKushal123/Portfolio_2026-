@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "buildCommand": "cd my-project && npm install && npm run build",
+  "outputDirectory": "my-project/dist",
+  "installCommand": "echo 'Skipping root install'"
+}
